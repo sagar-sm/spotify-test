@@ -17,7 +17,7 @@ exports.newuser = function(req, res){
 
 exports.userlist = function(db) {
     return function(req, res) {
-        var collection = db.getCollection('usercollection');
+        var collection = db.get('usercollection');
         collection.find({},{},function(e,docs){
             res.render('userlist', {
                 "userlist" : docs
@@ -29,12 +29,12 @@ exports.userlist = function(db) {
 exports.adduser = function(db) {
     return function(req, res) {
 
-        // Get our form values. These rely on the "name" attributes
+        // Get  form values. These rely on the "name" attributes
         var userName = req.body.username;
         var userEmail = req.body.email;
 
-        // Set our collection
-        var collection = db.getCollection('usercollection');
+        // Get collection
+        var collection = db.get('usercollection');
 
         // Submit to the DB
         collection.insert({
