@@ -32,8 +32,7 @@ exports.adduser = function(db) {
         // Get  form values. These rely on the "name" attributes
         var userName = req.body.username;
         var userEmail = req.body.email;
-
-        res.send(db);
+        
         // Get collection
         var collection = db.get('usercollection');
 
