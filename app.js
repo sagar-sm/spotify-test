@@ -14,9 +14,9 @@ var mongoUri = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
   'mongodb://localhost/v1';
 var monk = require('monk');
-var db = process.env.MONGOLAB_URI ||
+var db = monk(process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost/v1';//monk('localhost:27017/v1');
+  'mongodb://localhost/v1');//monk('localhost:27017/v1');
 
 
 mongo.Db.connect(mongoUri, function (err, db) {
