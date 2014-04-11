@@ -43,7 +43,7 @@ exports.adduser = function(db) {
         }, function (err, doc) {
             if (err) {
                 // If it failed, return error
-                res.send(err);
+                res.send("err...");
             }
             else {
                 // If it worked, set the header so the address bar doesn't still say /adduser
