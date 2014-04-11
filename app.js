@@ -12,7 +12,7 @@ var path = require('path');
 var mongo = require('mongodb');
 var mongoUri = process.env.MONGOLAB_URI ||
   process.env.MONGOHQ_URL ||
-  'mongodb://localhost/mydb';
+  'mongodb://localhost/v1';
 var monk = require('monk');
 var db = monk('localhost:27017/v1');
 
